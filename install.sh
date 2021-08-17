@@ -19,22 +19,22 @@ dest="$(realpath "${1}")"
 
 echo -e "\n=> 📥 Installing Libreoffice style Yaru\n"
 
-sudo mkdir -p -v "${dest}usr/share/libreoffice/share/config"
-sudo cp -v "images_yaru.zip" "${dest}usr/share/libreoffice/share/config/images_yaru.zip"
-sudo cp -v "images_yaru_svg.zip" "${dest}usr/share/libreoffice/share/config/images_yaru_svg.zip"
-sudo cp -v "images_yaru_mate.zip" "${dest}usr/share/libreoffice/share/config/images_yaru_mate.zip"
-sudo cp -v "images_yaru_mate_svg.zip" "${dest}usr/share/libreoffice/share/config/images_yaru_mate_svg.zip"
+sudo mkdir -p -v "${dest}/usr/share/libreoffice/share/config"
+sudo cp -v "images_yaru.zip" "${dest}/usr/share/libreoffice/share/config/images_yaru.zip"
+sudo cp -v "images_yaru_svg.zip" "${dest}/usr/share/libreoffice/share/config/images_yaru_svg.zip"
+sudo cp -v "images_yaru_mate.zip" "${dest}/usr/share/libreoffice/share/config/images_yaru_mate.zip"
+sudo cp -v "images_yaru_mate_svg.zip" "${dest}/usr/share/libreoffice/share/config/images_yaru_mate_svg.zip"
 
 for dir in \
-    ${dest}usr/lib64/libreoffice/share/config \
-    ${dest}usr/lib/libreoffice/share/config \
-    ${dest}usr/local/lib/libreoffice/share/config \
-    ${dest}opt/libreoffice*/share/config; do
+    ${dest}/usr/lib64/libreoffice/share/config \
+    ${dest}/usr/lib/libreoffice/share/config \
+    ${dest}/usr/local/lib/libreoffice/share/config \
+    ${dest}/opt/libreoffice*/share/config; do
         [ -d "$dir" ] || continue
-        sudo ln -sf -v "${dest}usr/share/libreoffice/share/config/images_yaru.zip" "$dir"
-        sudo ln -sf -v "${dest}usr/share/libreoffice/share/config/images_yaru_svg.zip" "$dir"
-        sudo ln -sf -v "${dest}usr/share/libreoffice/share/config/images_yaru_mate.zip" "$dir"
-        sudo ln -sf -v "${dest}usr/share/libreoffice/share/config/images_yaru_mate_svg.zip" "$dir"
+        sudo ln -sf -v "${dest}/usr/share/libreoffice/share/config/images_yaru.zip" "$dir"
+        sudo ln -sf -v "${dest}/usr/share/libreoffice/share/config/images_yaru_svg.zip" "$dir"
+        sudo ln -sf -v "${dest}/usr/share/libreoffice/share/config/images_yaru_mate.zip" "$dir"
+        sudo ln -sf -v "${dest}/usr/share/libreoffice/share/config/images_yaru_mate_svg.zip" "$dir"
 done
 
 echo -e "\n=> 🎉 Finish (don't forget to restart Libreoffice)!\n"
