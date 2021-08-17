@@ -25,6 +25,10 @@ sudo cp -v "images_yaru_svg.zip" "${dest}/usr/share/libreoffice/share/config/ima
 sudo cp -v "images_yaru_mate.zip" "${dest}/usr/share/libreoffice/share/config/images_yaru_mate.zip"
 sudo cp -v "images_yaru_mate_svg.zip" "${dest}/usr/share/libreoffice/share/config/images_yaru_mate_svg.zip"
 
+echo "\n\n\n${dest}/usr/lib64/libreoffice/share/config\n"
+echo "${dest}/usr/lib/libreoffice/share/config\n"
+
+
 for dir in \
     ${dest}/usr/lib64/libreoffice/share/config \
     ${dest}/usr/lib/libreoffice/share/config \
