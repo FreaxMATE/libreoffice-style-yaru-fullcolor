@@ -31,6 +31,7 @@ for dir in \
     ${dest}/usr/local/lib/libreoffice/share/config \
     ${dest}/opt/libreoffice*/share/config; do
         [ -d "$dir" ] || continue
+        echo "sudo ln -sf -v ${dest}/usr/share/libreoffice/share/config/images_yaru.zip $dir"
         sudo ln -sf -v "${dest}/usr/share/libreoffice/share/config/images_yaru.zip" "$dir"
         sudo ln -sf -v "${dest}/usr/share/libreoffice/share/config/images_yaru_svg.zip" "$dir"
         sudo ln -sf -v "${dest}/usr/share/libreoffice/share/config/images_yaru_mate.zip" "$dir"
